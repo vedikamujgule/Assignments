@@ -9,35 +9,77 @@
 # $1,000.
 import random
 
-num = random.randint(100, 999)
-guess = int(input("Enter 3 digit number: "))
+NUM = int(random.randint(100,999))
+print(NUM)
+USER = eval(input("Enter a 3 digit number"))
 
-NUM = num
-GUESS = guess
+num = NUM
+user = USER
+user1 = user//100
+user = user%100
+user2 = user//10
+user = user%10
+user3 = user
 
-g1 = GUESS // 100
-GUESS %= 100
-g2 = GUESS // 10
-GUESS %= 10
-g3 = GUESS
+num1 = num//100
+num = num%100
+num2 = num//10
+num = num%10
+num3 = num
 
-n1 = NUM // 100
-NUM %= 100
-n2 = NUM // 10
-NUM %= 10
-n3 = NUM
-
-if num == guess:
-    print("Exact match. You won $10,000")
-elif (g1 == n1 and g3 == n2 and g2 == n3 or
-      g2 == n1 and g1 == n2 and g3 == n3 or
-      g2 == n1 and g3 == n2 and g1 == n3 or
-      g3 == n1 and g1 == n2 and g2 == n3 or
-      g3 == n1 and g2 == n2 and g1 == n3):
-    print("Match all digits: you win $3,000")
-elif (g1 == n1 or g1 == n2 or g1 == n3
-      or g2 == n1 or g2 == n2 or g2 == n3
-      or g3 == n1 or g3 == n2 or g3 == n2):
-    print("Match one digit: you win $1,000")
+if USER == NUM:
+    print(USER, NUM)
+    print("The award is $10,000.")
+elif (user1 == num1 and user2 == num3 and user3==num2 or 
+      user1 == num2 or user2 == num2 or user3==num2 and 
+      user1 == num3 or user2 == num3 or user3==num3):
+    print("The award is $3,000.")
+elif (user1 == num1 or user2 == num1 or user3==num1 or 
+      user1 == num2 or user2 == num2 or user3==num2 or 
+      user1 == num3 or user2 == num3 or user3==num3):
+    print("The award is $1,000.")
 else:
-    print("Sorry, no match")
+    print("Sorry! No award for you.")
+
+
+
+
+
+
+
+
+
+
+
+# num = random.randint(100, 999)
+# guess = int(input("Enter 3 digit number: "))
+
+# NUM = num
+# GUESS = guess
+
+# g1 = GUESS // 100
+# GUESS %= 100
+# g2 = GUESS // 10
+# GUESS %= 10
+# g3 = GUESS
+
+# n1 = NUM // 100
+# NUM %= 100
+# n2 = NUM // 10
+# NUM %= 10
+# n3 = NUM
+
+# if num == guess:
+#     print("Exact match. You won $10,000")
+# elif (g1 == n1 and g3 == n2 and g2 == n3 or
+#       g2 == n1 and g1 == n2 and g3 == n3 or
+#       g2 == n1 and g3 == n2 and g1 == n3 or
+#       g3 == n1 and g1 == n2 and g2 == n3 or
+#       g3 == n1 and g2 == n2 and g1 == n3):
+#     print("Match all digits: you win $3,000")
+# elif (g1 == n1 or g1 == n2 or g1 == n3
+#       or g2 == n1 or g2 == n2 or g2 == n3
+#       or g3 == n1 or g3 == n2 or g3 == n2):
+#     print("Match one digit: you win $1,000")
+# else:
+#     print("Sorry, no match")
