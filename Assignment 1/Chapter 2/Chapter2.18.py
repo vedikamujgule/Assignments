@@ -4,7 +4,7 @@
 # time zone.
 import time
 
-tzo = eval(input("Enter the time zone offset to GMT:"))
+timeZoneOffset = eval(input("Enter the time zone offset to GMT:"))
 currentTime = time.time()
 totalSeconds = int(currentTime)
 currentSecond = totalSeconds % 60
@@ -12,6 +12,6 @@ totalMinutes = totalSeconds // 60
 currentMintute = totalMinutes % 60
 totalHours = totalMinutes // 60
 currentHour = totalHours % 24
-currentHour += tzo
+currentHour += timeZoneOffset
 print(currentHour, ":", currentMintute, ":", currentSecond)
 

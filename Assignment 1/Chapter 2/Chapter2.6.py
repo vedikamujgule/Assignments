@@ -4,11 +4,12 @@
 # operator to remove the extracted digit. For instance, 932 % 10 = 2 and 932 //
 # 10 = 93.)
 num = eval(input("Enter any number between 0 and 1000: "))
+NUM=num
 one = num%10
 num //= 10
 two = num%10
 num //= 10
 three = num%10
 num //= 10
-print("The sum of the digits is", (one+two+three))
+print("The sum of the digits for number "+str(NUM)+" is",(one+two+three))
 

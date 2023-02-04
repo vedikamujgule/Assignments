@@ -12,9 +12,9 @@ payR = eval(input("Enter hourly pay rate: "))
 ftwr = eval(input("Enter federal tax withholding rate: "))
 stwr = eval(input("Enter state tax withholding rate: "))
 grossP = workH * payR
-fw = .2 * grossP
-sw = stwr * grossP
-total = fw + sw
+fedralWithholding = .2 * grossP
+stateWithholding = stwr * grossP
+total = fedralWithholding + stateWithholding
 net = grossP - total
 
 print("Employee Name:", format(name, "2s"))
@@ -22,7 +22,7 @@ print("Hours Worked:", format(workH, ".1f"))
 print("Pay Rate:", format(payR, ".2f"))
 print("Gross Pay:", format(grossP, ".1f"))
 print("Deductions:")
-print("\tFederal Withholding " + "(" + format(ftwr, "2.1%") + "): $" + format(fw, ".2f"))
-print("\tState Withholding " + "(" + format(stwr, ".1%") + "): $" + format(sw, ".2f"))
+print("\tFederal Withholding " + "(" + format(ftwr, "2.1%") + "): $" + format(fedralWithholding, ".2f"))
+print("\tState Withholding " + "(" + format(stwr, ".1%") + "): $" + format(fedralWithholding, ".2f"))
 print("\tTotal Deduction: " + "$" + format(total, ".2f"))
 print("Net Pay: $" + format(net, ".2f"))

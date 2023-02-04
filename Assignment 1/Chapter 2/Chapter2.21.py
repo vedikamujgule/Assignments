@@ -11,12 +11,12 @@
 # Write a program that prompts the user to enter a monthly saving amount and
 # displays the account value after the sixth month.
 
-monthlySavingAmount = eval(input("Enter the monthly saving amount: "))
-MONTHLY_INTEREST_RATE = 0.00417
-total = monthlySavingAmount * (1 + MONTHLY_INTEREST_RATE)
-total = (monthlySavingAmount + total) * (1 + MONTHLY_INTEREST_RATE)
-total = (monthlySavingAmount + total) * (1 + MONTHLY_INTEREST_RATE)
-total = (monthlySavingAmount + total) * (1 + MONTHLY_INTEREST_RATE)
-total = (monthlySavingAmount + total) * (1 + MONTHLY_INTEREST_RATE)
-total = (monthlySavingAmount + total) * (1 + MONTHLY_INTEREST_RATE)
-print("The account value after 6 months is",total)
+monthlySavingAmount = eval(input("Enter monthly saving amount: "))
+IR = 0.00417
+total = monthlySavingAmount * (1 + IR)
+total = (monthlySavingAmount + total) * (1 + IR)
+total = (monthlySavingAmount + total) * (1 + IR)
+total = (monthlySavingAmount + total) * (1 + IR)
+total = (monthlySavingAmount + total) * (1 + IR)
+total = (monthlySavingAmount + total) * (1 + IR)
+print("The amount in account after 6 months is: ",total)

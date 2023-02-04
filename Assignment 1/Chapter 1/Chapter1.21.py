@@ -26,29 +26,21 @@ turtle.goto(0,100)
 turtle.pendown()
 turtle.circle(100)
 
- # label
-turtle.write(str(12), align="center",
-              font=("Arial",
-                    12, "normal"))
-
+ # labelling digits
+turtle.write(str(12))
 turtle.left(90)
 turtle.penup()
 turtle.forward(220)
-turtle.write(str(6), align="center",
-              font=("Arial",
-                    12, "normal"))
+turtle.write(str(6))
 turtle.left(180)
 turtle.penup()
 turtle.forward(100)
 turtle.right(90)
 turtle.forward(110)
-turtle.write(str(3), align="center",
-              font=("Arial",
-                    12, "normal"))
+turtle.write(str(3))
 turtle.left(180)
 turtle.penup()
 turtle.forward(220)
-turtle.write(str(9), align="center",
-              font=("Arial",
-                    12, "normal"))
+turtle.write(str(9))
+turtle.done()
 
