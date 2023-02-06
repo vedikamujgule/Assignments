@@ -17,12 +17,12 @@ stateWithholding = stwr * grossP
 total = fedralWithholding + stateWithholding
 net = grossP - total
 
-print("Employee Name:", format(name, "2s"))
-print("Hours Worked:", format(workH, ".1f"))
-print("Pay Rate:", format(payR, ".2f"))
-print("Gross Pay:", format(grossP, ".1f"))
+print("Employee Name: ", format(name, "2s"))
+print("Hours Worked: ", format(workH, ".1f"))
+print("Pay Rate: ", format(payR, ".2f"))
+print("Gross Pay: ", format(grossP, ".1f"))
 print("Deductions:")
-print("\tFederal Withholding " + "(" + format(ftwr, "2.1%") + "): $" + format(fedralWithholding, ".2f"))
-print("\tState Withholding " + "(" + format(stwr, ".1%") + "): $" + format(fedralWithholding, ".2f"))
+print("\tFederal Withholding: " + "(" + format(ftwr, "2.1%") + "): $" + format(fedralWithholding, ".2f"))
+print("\tState Withholding: " + "(" + format(stwr, ".1%") + "): $" + format(fedralWithholding, ".2f"))
 print("\tTotal Deduction: " + "$" + format(total, ".2f"))
 print("Net Pay: $" + format(net, ".2f"))

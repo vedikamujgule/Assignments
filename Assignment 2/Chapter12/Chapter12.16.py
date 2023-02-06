@@ -24,7 +24,7 @@ class Stack(list):
             self.counter -= 1
             return res
         else:
-            return "Stack is empty"
+            return "Stack empty"
 
     def isEmpty(self):
         return self.counter < 0
@@ -33,14 +33,14 @@ class Stack(list):
         if not self.isEmpty():
             return self[self.counter]
         else:
-            return "Stack is empty"
+            return "Stack empty"
 
 s = Stack(5)
-s.push(10)
-s.push(20)
-s.push(30)
-s.push(40)
-s.push(50)
+s.push(1)
+s.push(2)
+s.push(3)
+s.push(4)
+s.push(5)
 print(s.peek())
 print(s.pop())
 print(s.pop())

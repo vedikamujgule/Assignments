@@ -5,7 +5,7 @@
 # elements: score and name. Apply the sort method to sort the list. This will sort
 # the list on scores.)
 
-lst = input("Enter name and marks of student's").split()
+lst = input("Enter name and marks of student's: ").split()
 students = []
 for i in range(0,len(lst),2):
     students.append([lst[i], lst[i+1]])

@@ -19,6 +19,7 @@
 # that creates three RegularPolygon objects, created using RegularPolygon(),
 # using RegularPolygon(6, 4) and RegularPolygon(10, 4, 5.6, 7.8). For
 # each object, display its perimeter and area.
+
 import math
 class RegularPolygon:
     def __init__(self,n=3,side=1,x=0,y=0):
@@ -27,7 +28,7 @@ class RegularPolygon:
         self.__x = x
         self.__y = y
 
-    # accessor
+    # getter
         def getN(self):
             return self.n
         
@@ -40,7 +41,7 @@ class RegularPolygon:
         def getY(self):
             return self.y
         
-    # mutator
+    # setter
         def setN(self,n):
             self.__n = n
 

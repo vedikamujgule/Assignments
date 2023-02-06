@@ -64,7 +64,6 @@ def step():
     control.key = float(key.get())
     control.step()
 
-
 def reset():
     control.reset()
 

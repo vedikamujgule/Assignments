@@ -12,10 +12,11 @@ turtle.backward(200)
 turtle.pendown()
 turtle.left(60)
 turtle.begin_fill()
-turtle.color("red")
+turtle.color("gray")
 turtle.circle(70, steps=3)
 turtle.end_fill()
 
+#add space
 turtle.penup()
 turtle.setheading(0)
 turtle.forward(130)
@@ -24,10 +25,10 @@ turtle.forward(130)
 turtle.pendown()
 turtle.left(45)
 turtle.begin_fill()
-turtle.color("green")
+turtle.color("gray")
 turtle.circle(70, steps=4)
 turtle.end_fill()
-
+#add space
 turtle.penup()
 turtle.setheading(0)
 turtle.forward(130)
@@ -36,10 +37,11 @@ turtle.forward(130)
 turtle.pendown()
 turtle.left(35)
 turtle.begin_fill()
-turtle.color("blue")
+turtle.color("gray")
 turtle.circle(70, steps=5)
 turtle.end_fill()
 
+#add space
 turtle.penup()
 turtle.setheading(0)
 turtle.forward(140)
@@ -48,22 +50,21 @@ turtle.forward(140)
 turtle.pendown()
 turtle.left(30)
 turtle.begin_fill()
-turtle.color("brown")
+turtle.color("gray")
 turtle.circle(70, steps=6)
 turtle.end_fill()
 
+#add space
 turtle.penup()
 turtle.setheading(0)
-turtle.forward(100)
+turtle.forward(50)
 
 # octagon
 turtle.pendown()
 turtle.right(23)
 turtle.begin_fill()
-turtle.color("Black")
+turtle.color("gray")
 turtle.circle(40, steps=8)
 turtle.end_fill()
-
-
 turtle.done()
 

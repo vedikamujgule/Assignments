@@ -14,4 +14,4 @@ while True:
         break
     d -= 1
 
-print("The greatest common divisor is", d)
+print("The greatest common divisor (GCD) is: ", d)

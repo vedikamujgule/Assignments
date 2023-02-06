@@ -17,5 +17,5 @@ def sumDigits(n):
         n = n//10
     return sum
 
-n = eval(input("Enter the number"))
-print("The sum of digits in Num is ", sumDigits(n))
+n = eval(input("Enter the numbe: r"))
+print("The sum of digits in Num is: ", sumDigits(n))

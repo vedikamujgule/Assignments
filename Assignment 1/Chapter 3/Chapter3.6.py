@@ -4,4 +4,4 @@
 
 c = int(input("Enter an ASCII code (between 0-127): "))
 c = chr(c)
-print("The character is", c, str(ord('a')))
+print("The character is: ", c, str(ord('a')))

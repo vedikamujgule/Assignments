@@ -28,7 +28,7 @@ def getLocation(lst):
         return loc
     
 def main():
-    row, col = eval(input("Enter the number of rows and colums in the list"))
+    row, col = eval(input("Enter the number of rows and colums in the list: "))
     lst =[]
 
     for i in range(row):

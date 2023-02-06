@@ -15,9 +15,9 @@ def reverse(number):
 
 def isPalindrome(number):
     if number == reverse(number):
-        print("Number is Palindrome")
+        print("Number is Palindrome!")
     else:
-        print("Number is not Palindrome")
+        print("Number is not Palindrome!")
 
-number = eval(input("Enter a number"))
+number = eval(input("Enter a number: "))
 print(isPalindrome(number))

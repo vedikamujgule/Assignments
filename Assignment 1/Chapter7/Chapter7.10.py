@@ -36,6 +36,6 @@ class Time:
         self.__hour = totalHours%24
 
 currTime = Time()
-elapsedTime= eval(input("Enter the time elapsed"))
+elapsedTime= eval(input("Enter the time elapsed: "))
 currTime.setTime(elapsedTime)
-print("The elapse time is HR:MIN:SEC",currTime.getHour(), ":", currTime.getMinute(), ":", currTime.getSecond())
+print("The elapse time is HR:MIN:SEC : ",currTime.getHour(), ":", currTime.getMinute(), ":", currTime.getSecond())

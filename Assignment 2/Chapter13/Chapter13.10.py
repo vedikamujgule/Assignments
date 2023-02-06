@@ -11,42 +11,34 @@ class Rational:
                            * int(numerator / divisor)
         self.__denominator = int(abs(denominator) / divisor)
 
-    # Add a rational number to this rational number
     def __add__(self, secondRational):
         n = self.__numerator * secondRational[1] + \
             self.__denominator * secondRational[0]
         d = self.__denominator * secondRational[1]
         return Rational(n, d)
 
-    # Subtract a rational number from this rational number
     def __sub__(self, secondRational):
         n = self.__numerator * secondRational[1] - \
             self.__denominator * secondRational[0]
         d = self.__denominator * secondRational[1]
         return Rational(n, d)
 
-    # Multiply a rational number to this rational
     def __mul__(self, secondRational):
         n = self.__numerator * secondRational[0]
         d = self.__denominator * secondRational[1]
         return Rational(n, d)
 
-    # Divide a rational number by this rational number
     def __truediv__(self, secondRational):
         n = self.__numerator * secondRational[1]
         d = self.__denominator * secondRational[0]
         return Rational(n, d)
 
-    # Return a float for the rational number
     def __float__(self):
         return self.__numerator / self.__denominator
-
-        # Return an integer for the rational number
 
     def __int__(self):
         return int(self.__float__())
 
-    # Return a string representation
     def __str__(self):
         if self.__denominator == 1:
             return str(self.__numerator)
@@ -74,7 +66,6 @@ class Rational:
             return -1
         else:
             return 0
-            # Return numerator and denominator using an index operator
 
     def __getitem__(self, index):
         if index == 0:
@@ -92,7 +83,6 @@ def gcd(n, d):
             gcd = k
         k += 1
     return gcd
-
 
 def main():
     try:

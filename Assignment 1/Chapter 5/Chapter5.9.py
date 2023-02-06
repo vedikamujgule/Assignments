@@ -10,6 +10,6 @@ total = 0
 for i in range(1,15):
     fees += fees*interest
     if(i ==10):
-        print("The cost of tuition in 10 years is $", fees)
+        print("The cost of tuition in next 10 years is $", fees)
     if(i>10):
         total= total+fees

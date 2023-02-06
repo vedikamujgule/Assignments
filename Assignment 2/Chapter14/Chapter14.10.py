@@ -59,15 +59,15 @@ def main():
     states = dictionary.keys()
 
     for state in states:
-        capital = input("What is the capital of " + state + "? ").strip()
+        capital = input("What is the capital of: " + state + "? ").strip()
 
         if capital.lower() == dictionary[state].lower():
-            print("Your answer is correct")
+            print("Your answer is correct!")
             correctCount += 1
         else:
-            print("The correct answer should be " + dictionary[state])
+            print("The correct answer should be: " + dictionary[state])
 
-    print("The correct count is " + str(correctCount))
+    print("The correct count is: " + str(correctCount))
 
 
 main()

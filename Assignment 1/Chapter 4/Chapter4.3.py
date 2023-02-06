@@ -1,21 +1,14 @@
-# 4.33 (Decimal to hex) Write a program that prompts the user to enter an integer
-# between 0 and 15 and displays its corresponding hex number.
+#hapter04: 3, 4, 5, 15, 17, 21, 24, 29, 39
+# (Algebra: solve 2*2 linear equations) You can use Cramer’s rule to solve the
+# following 2*2 system of linear equation:
+# Write a program that prompts the user to enter a, b, c, d, e, and f and display the
+# result. If ad – bc is 0, report that The equation has no solution.
 
-dec = int(input("Enter a decimal value (0 to 15): "))
+a, b, c, d, e, f = eval(input("Enter a, b, c, d, e, f: "))
 
-if 0 <= dec < 10:
-    print("The hex value is", dec)
-elif dec == 10:
-    print("The hex value is A")
-elif dec == 11:
-    print("The hex value is B")
-elif dec == 12:
-    print("The hex value is C")
-elif dec == 13:
-    print("The hex value is D")
-elif dec == 14:
-    print("The hex value is E")
-elif dec == 15:
-    print("The hex value is F")
+if a * d - b * c == 0:
+    print("The equation does not have a solution")
 else:
-    print("Invalid input")
+    x = (e * d - b * f) / (a * d - b * c)
+    y = (a * f - e * c) / (a * d - b * c)
+    print("x is", format(x, "0.1f"), "y is", format(y, "0.1f"))

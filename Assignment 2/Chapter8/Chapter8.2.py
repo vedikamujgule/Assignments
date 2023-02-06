@@ -7,12 +7,6 @@ def find(s1,s2):
     len1 = len(s1)
     len2 = len(s2)
 
-    #Swap if the string 1 length is less than string 2
-    if(len1<len2):
-        s1,s2 = s2,s1
-        len1 = len(s1)
-        len2 = len(s2)
-
     start = 0
     while len1<=len2:
         if s1 !=s2[start:start+len1]:
@@ -22,7 +16,6 @@ def find(s1,s2):
             return start
     return -1
 
-
 def main():
     string1 = input("Enter the First String ")
     string2 = input("Enter the Second String ")
@@ -30,9 +23,6 @@ def main():
     if result ==-1:
         print("The first string is not a substring of the second string")
     else:
-        if(len(string1)<len(string2)):
-            print("The second string is a substring of the first string at index ", str(result))
-        else:
-            print("The first string is a substring of the second string at index ", str(result))
+        print("The first string is a substring of the second string at index ", str(result))
 main()
 

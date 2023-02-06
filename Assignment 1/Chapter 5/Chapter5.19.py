@@ -5,7 +5,7 @@
 # 5.19 (Display a pyramid) Write a program that prompts the user to enter an integer
 # from 1 to 15 and displays a pyramid, as shown in the following sample run:
 
-n = int(input("Enter number of lines: "))
+n = int(input("Enter number of lines to display the pattern: "))
 x = n * 2
 for i in range(1, n + 1):
     s = n + x

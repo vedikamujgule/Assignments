@@ -20,6 +20,7 @@ class LinearEquation:
         self.__e = e
         self.__f = f
 
+    #getter 
     def getA(self):
         return self.__a
 

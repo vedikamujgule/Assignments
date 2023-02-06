@@ -2,8 +2,8 @@
 # display a histogram for the result, as shown in Figure 14.4. You need to display a
 # message in a message box if the file does not exist.
 
-from tkinter import *  # Import tkinter
-import tkinter.messagebox  # Import tkinter.messagebox
+from tkinter import *
+import tkinter.messagebox
 from tkinter.filedialog import askopenfilename
 
 LINE_WIDTH = 23
@@ -25,13 +25,11 @@ def showResult():
         cnvs.create_rectangle(x-9, BASE-counts[i], x + LINE_WIDTH-9, BASE,tag="data")
         x += LINE_WIDTH
 
-
 def countLetters(lines, counts):
     for line in lines:
         for ch in line:
             if ch.isalpha():
                 counts[ord(ch) - ord('a')] += 1
-
 
 def openFile():
     filenameforReading = askopenfilename()

@@ -5,8 +5,6 @@
 # TriangleError exception if the three given sides cannot form a triangle.
 
 import math
-
-
 class TriangleError(RuntimeError):
     def __init__(self, side1, side2, side3):
         super().__init__()
@@ -22,7 +20,6 @@ class TriangleError(RuntimeError):
 
     def getSide3(self):
         return self.__side3
-
 
 class GeometricObject:
     def __init__(self, color="green", filled=True):
@@ -44,7 +41,6 @@ class GeometricObject:
     def __str__(self):
         return "color: " + self.__color + \
                " and filled: " + str(self.__filled)
-
 
 class Triangle(GeometricObject):
     def __init__(self, side1=1.0, side2=1.0, side3=1.0, color="green", isFilld=True):
@@ -93,15 +89,14 @@ class Triangle(GeometricObject):
 
 def main():
     try:
-        s1, s2, s3 = eval(input("Enter three sides of a Triangle: "))
-        color = input("Enter color of a triangle: ")
-        isFilled = bool(int(input("Is the triangle filled? (1 or 0): ")))
-
-        trngl = Triangle(s1, s2, s3, color, isFilled)
-        print("Triangle's area is:", trngl.getArea())
-        print("Triangle's perimeter is:", trngl.getPerimeter())
-        print(trngl)
+        s1, s2, s3 = eval(input("Enter 3 sides of a Triangle: "))
+        color = input("Enter color of the triangle: ")
+        isFilled = bool(int(input("Triangle filled? (1/0): ")))
+        traingleObj = Triangle(s1, s2, s3, color, isFilled)
+        print("Area of triangle is:", traingleObj.getArea())
+        print("Perimeter of triangle is:", traingleObj.getPerimeter())
+        print(traingleObj)
     except TriangleError:
-        print("Cannot form a triangle from this input")
+        print("Invalid input to form triange")
 
 main()

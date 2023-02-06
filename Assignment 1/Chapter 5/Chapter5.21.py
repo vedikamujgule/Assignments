@@ -1,3 +1,5 @@
+# Display numbers in a pyramid pattern) Write a nested for loop that displays the
+
 n = 9
 x = n * 2
 for i in range(1, n):

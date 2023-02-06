@@ -5,7 +5,6 @@
 import os.path
 import sys
 
-
 def main():
     keyWords = {"and": 0, "as": 0, "assert": 0, "break": 0, "class": 0,
                 "continue": 0, "def": 0, "del": 0, "elif": 0, "else": 0,
@@ -16,16 +15,15 @@ def main():
 
     filename = input("Enter a Python source code filename: ").strip()
 
-    if not os.path.isfile(filename):  # Check if target file exists
-        print("File", filename, "does not exist")
+    if not os.path.isfile(filename):
+        print("File with name", filename, "does not exist")
         sys.exit()
 
-    infile = open(filename, "r")  # Open files for input
+    infile = open(filename, "r")
 
-    # text = infile.read().split()  # Read and split words from the file
     text = infile.readlines()
     for i in range(len(text)):
-        indx = text[i].find(chr(35))  # remove comments, I use chr(35) instead of writing # directly as the # may be used in literal strings
+        indx = text[i].find(chr(35))
         if indx != -1:
             line = text[i]
             line = line[0:indx]
@@ -38,6 +36,5 @@ def main():
 
     for itm in keyWords:
         print(itm, ":", keyWords[itm])
-
 
 main()

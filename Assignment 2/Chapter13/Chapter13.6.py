@@ -6,4 +6,4 @@ import urllib.request
 file = urllib.request.urlopen("http://cs.armstrong.edu/liang/data/Lincoln.txt")
 data = file.read.decode()
 data = data.split()
-print("There are", len(data), "Words")
+print("There are total :", len(data), "Words in the file")

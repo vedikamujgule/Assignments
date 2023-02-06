@@ -12,5 +12,5 @@ def printMatrix(n):
         if(i%n ==0):
             print("")
 
-n = eval(input("Enter a number"))
+n = eval(input("Enter a number: "))
 printMatrix(n)

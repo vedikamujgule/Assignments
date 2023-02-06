@@ -15,5 +15,5 @@ for line in lines:
             else:
                 count_consonants += 1
 
-print("Total number of vowels =", count_vowels)
-print("Total number of consonants =", count_consonants)
+print("Total number of vowels are=", count_vowels)
+print("Total number of consonants are =", count_consonants)
