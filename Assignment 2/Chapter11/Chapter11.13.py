@@ -8,16 +8,14 @@
 # a sample run:
 
 def locateLargest(a):
-    max_indx_row = 0
-    max_indx_col = 0
+    max_i = 0
+    max_j = 0
     for i in range(len(a)):
         for j in range(len(a[i])):
-            if a[i][j] > a[max_indx_row][max_indx_col]:
-                max_indx_row = i
-                max_indx_col = j
-
-    return max_indx_row, max_indx_col
-
+            if a[i][j] > a[max_i][max_j]:
+                max_i = i
+                max_j = j
+    return max_i, max_j
 
 rows = int(input("Enter the number of rows in the list: "))
 matrix = []

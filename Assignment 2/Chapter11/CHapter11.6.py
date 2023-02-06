@@ -43,31 +43,21 @@ for i in range(3):
         m2[i][j] = float(l2[counter])
         counter += 1
 
-
-product = []
-cellValue = 0
-# Multiply the matrices and store result in sum
-# Take each row of M1 against ever col of M2
-
-for i in range(3):
-    product.append([0] * 3)
-    j=0
-    CurrentM1Column = 0
-    while(CurrentM1Column!=3):
-        cellValue += m1[i][j]*m2[j][CurrentM1Column] #compare every row of M1 against every column of M2, counter points to the current M2 col
-
-        if((j+1)%3==0 and CurrentM1Column <3):   #after every row
-            product[i][CurrentM1Column] = round(cellValue,2)
-            cellValue = 0
-            CurrentM1Column += 1
-            j=-1  # resetting to -1, so after J+=1, j = 0 ==> reset
-        j += 1
-
-print("The Matrices are added as follows: ")
+result =[]
+# iterate through rows of m1    
+for i in range(len(m1)):
+    result.append([0]*3)
+    # iterating by column by m2
+    for j in range(len(m2[0])):
+        # iterating by rows of m2
+        for k in range(len(m2)):
+            result[i][j] += m1[i][k] * m2[k][j]
+            
+print("The Matrices are multiplied as follows: ")
 
 # Display 2D in matrix style
 for i in range(3):
     for j in range(3):
-        print(product[i][j], end=" ")
+        print(result[i][j], end=" ")
         if(j==2):
             print()

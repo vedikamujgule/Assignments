@@ -19,15 +19,18 @@ def merge(l1, l2):
         else:
             res.append(m2)
             c2 += 1
+    print(res)
 
     while c1 < len(l1):
         res.append(l1[c1])
         c1 += 1
+    print(res)
+
     while c2 < len(l2):
         res.append(l2[c2])
         c2 += 1
     return res
-
+    print(res)
 
 l1 = [int(x) for x in input("Enter list1: ").split()]
 l2 = [int(x) for x in input("Enter list2: ").split()]

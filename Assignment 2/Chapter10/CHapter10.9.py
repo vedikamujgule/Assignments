@@ -16,7 +16,7 @@ import math
 
 def deviation(x):
     meanValue = mean(x)
-    print("The mean value is "+ str(meanValue))
+    print("The mean value is "+ format(meanValue,'.2f'))
     a = [(i-meanValue)**2 for i in x]
     sum(a)
     deviation = math.sqrt((sum(a)/len(x)-1))
@@ -28,6 +28,6 @@ def mean(x):
 def main():
     numbers = input("Enter the numbers with a space")
     resDeviation = deviation([float(s) for s in numbers.split()])
-    print("The deviation value is "+ str(resDeviation))
+    print("The deviation value is "+ format(resDeviation,'.5f'))
 
 main()

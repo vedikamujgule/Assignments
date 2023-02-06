@@ -6,3 +6,5 @@ numbers = input("Enter digits seperated by space : ")
 nums = [int(s) for s in numbers.split()]
 res = nums[::-1]
 print(res)
+
+

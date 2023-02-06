@@ -14,5 +14,4 @@ turtle.write(s)
 turtle.goto(x2, y2)
 s = "(" + str(x2) + "," + str(y2) + ")"
 turtle.write(s)
-
 turtle.done()

@@ -1,7 +1,7 @@
+# 5.26 (Sum a series) Write a program to sum the following series:
 
-# *5.26 (Sum a series) Write a program to sum the following series:
 sum = 0
-for i in range(1,99):
-    if(i%2 !=0):
-        sum += i/(i+2)
-print(sum)
+for i in range(1, 98):
+    sum += i / (i + 2)
+
+print("The sum is", sum)

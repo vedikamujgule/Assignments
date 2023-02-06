@@ -14,5 +14,8 @@ def isSorted(lst):
 
 numbers = input("Enter ten numbers")
 numList = [int(x) for x in numbers.split()]
-print(isSorted(numList))
+if isSorted(numList):
+    print("The list is sorted")
+else:
+    print("The list is not sorted")
 

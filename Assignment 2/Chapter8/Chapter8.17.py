@@ -1,20 +1,34 @@
-# Chapter01: 11, 18, 21
+import math
 
-# (Population projection) The US Census Bureau projects population based on the
-# following assumptions:
-# One birth every 7 seconds
-# One death every 13 seconds
-# One new immigrant every 45 seconds
-# Write a program to display the population for each of the next five years. Assume the
-# current population is 312032486 and one year has 365 days. Hint: in Python, you
-# can use integer division operator // to perform division. The result is an integer. For
-# example, 5 // 4 is 1 (not 1.25) and 10 // 4 is 2 (not 2.5).
+class Point:
+    def __init__(self, x=0, y=0):
+        self.__x__ = x
+        self.__y__ = y
 
-currPopulation = 312032486
-seconds = 365*24*60*60*5
-newBirth = seconds//7
-immigrants = seconds//45
-death = seconds//13
-print(int(currPopulation+newBirth+immigrants-death))
+    def getX(self):
+        return self.__x__
 
+    def getY(self):
+        return self.__y__
 
+    def distance(self, point):
+        dis = math.sqrt((self.__x__ - point.getX()) ** 2 + (self.__y__ - point.getY()) ** 2)
+        return dis
+
+    def isNearBy(self, point):
+        d = self.distance(point)
+        return True if d < 5 else False
+
+    def _str_(self):
+        return '( ' + str(self.__x__) + ',' + str(self.__y__) + ' )'
+
+def main():
+    x1, y1, x2, y2 = eval(input("Enter two points x1, y1, x2, y2: "))
+    p1 = Point(x1, y1)
+    p2 = Point(x2, y2)
+    print("The distance between the two points is", p1.distance(p2))
+    if p1.isNearBy(p2):
+        print("The two points are near each other")
+    else:
+        print("The two points are not near each other")
+main()

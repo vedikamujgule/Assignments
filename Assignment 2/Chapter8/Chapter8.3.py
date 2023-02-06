@@ -10,7 +10,7 @@
 def checkPassword(userInput):
     noOfCh = 0
     noOfDigits = 0
-    for ch in userInput[:]:
+    for ch in userInput:
         if ch.isdigit():
             noOfDigits +=1
         if ch.isalpha():

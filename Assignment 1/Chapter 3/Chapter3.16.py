@@ -6,7 +6,7 @@
 import turtle
 
 turtle.penup()
-turtle.backward(150)
+turtle.backward(200)
 
 # triangle
 turtle.pendown()
@@ -51,6 +51,19 @@ turtle.begin_fill()
 turtle.color("brown")
 turtle.circle(70, steps=6)
 turtle.end_fill()
+
+turtle.penup()
+turtle.setheading(0)
+turtle.forward(100)
+
+# octagon
+turtle.pendown()
+turtle.right(23)
+turtle.begin_fill()
+turtle.color("Black")
+turtle.circle(40, steps=8)
+turtle.end_fill()
+
 
 turtle.done()
 

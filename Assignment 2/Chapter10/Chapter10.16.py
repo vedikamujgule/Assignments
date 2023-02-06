@@ -9,7 +9,8 @@
 
 def bubbleSort(lst):
     for i in range(len(lst)-1):
-        for x in range(len(lst)-1):
+        print(len(lst)-1)
+        for x in range(len(lst)-i-1):
             if lst[x] > lst[x+1]:
                 lst[x], lst[x+1] = lst[x+1], lst[x]
 

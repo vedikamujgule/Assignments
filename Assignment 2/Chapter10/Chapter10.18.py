@@ -4,21 +4,6 @@
 # many possible solutions. Write a program that displays one such solution. A
 # sample output is shown below: 
 
-def main():
-    queens = 8 * [-1] 
-    queens[0] = 0
-    k = 1
-    while k >= 0 and k <= 7:
-        j = findPosition(k, queens)
-        if j < 0:
-            queens[k] = -1
-            k -= 1  
-        else:
-            queens[k] = j
-            k += 1
-    printResult(queens)
-
-
 def findPosition(k, queens):
     start = 0 if queens[k] == -1 else (queens[k] + 1)
 
@@ -27,10 +12,7 @@ def findPosition(k, queens):
             return j 
     return -1
 
-# Return true if you a queen can be placed at (k, j)
 def isValid(k, j, queens):
-    # See if (k, j) is a possible position
-    # Check jth column
     for i in range(k):
         if queens[i] == j:
             return False
@@ -46,12 +28,9 @@ def isValid(k, j, queens):
     while row >= 0 and column <= 7:
         if queens[row] == column:
             return False
-
         row -= 1
         column -= 1
-
     return True
-
 
 def printResult(queens):
     for i in range(8):
@@ -65,4 +44,19 @@ def printResult(queens):
         for j in range(queens[i] + 1, 8):
             print(" |", end="")
         print()
+
+def main():
+    queens = 8 * [-1] 
+    queens[0] = 0
+    k = 1
+    while k >= 0 and k <= 7:
+        j = findPosition(k, queens)
+        if j < 0:
+            queens[k] = -1
+            k -= 1  
+        else:
+            queens[k] = j
+            k += 1
+    printResult(queens)
+
 main()

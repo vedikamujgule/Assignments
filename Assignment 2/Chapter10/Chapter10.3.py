@@ -11,5 +11,5 @@ for no in nums:
         if c>1:
             print(str(no) + " Occurs "+ str(c) +" Times")
         else:
-            print(str(no) + " Occurs "+ str(c) +" Times")
+            print(str(no) + " Occurs "+ str(c) +" Time")
         counted.append(no)

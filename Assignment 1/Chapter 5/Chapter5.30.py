@@ -3,6 +3,7 @@
 # in the year on the console. For example, if the user entered year 2013, and 2 for
 # Tuesday, January 1, 2013, your program should display the following output:
 # January 1, 2013 is Tuesday
+# ...
 # December 1, 2013 is Sunday
 
 year = eval(input("Enter a year: "))

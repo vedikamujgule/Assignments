@@ -1,8 +1,11 @@
-# Write the following function that returns true if the list is already
-# sorted in increasing order:
-# def isSorted(lst):
-# Write a test program that prompts the user to enter a list and displays whether the
-# list is sorted or not. Here is a sample run:
+# (Simulation using Turtle: self-avoiding random walk) A self-avoiding walk in a
+# lattice is a path from one point to another that does not visit the same point twice.
+# Self-avoiding walks have applications in physics, chemistry, and mathematics.
+# They can be used to model chainlike entities such as solvents and polymers. Write
+# a Turtle program that displays a random path that starts from the center and ends at
+# a point on the boundary, as shown in Figure 11.11a, or ends at a dead-end point
+# (i.e., surrounded by four points that have already been visited), as shown in Figure
+# 11.11b. Assume the size of the lattice is 16 * 16.
 
 import turtle
 from random import random

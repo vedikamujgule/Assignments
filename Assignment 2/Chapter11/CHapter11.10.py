@@ -13,50 +13,57 @@ import random
 def getRandBinaryValue():
     return random.randint(0, 1)
 
-a4x4Matrix = []
-
+m1 = []
 index = 0
 max = 0
 count = 0
-
+indexCol =[]
 # Fill 4x4 Matrix and get largest row index in the process
 for i in range(4):
     count = 0
-    a4x4Matrix.append([0] * 4)
+    m1.append([0] * 4)
     for j in range(4):
-        a4x4Matrix[i][j] = getRandBinaryValue()
-        count = count + a4x4Matrix[i][j]
+        m1[i][j] = getRandBinaryValue()
+        count = count + m1[i][j]
         if (count>max):
             max = count
             index = i
+print("row",index)
 
+max = 0
+transpose = [[row[i] for row in m1] for i in range(len(m1[0]))]
+for i in range(4):
+    for j in range(4):
+        count = count + transpose[i][j]
+        if (count>max):
+            max = count
+            indexCol = i
+print("col",indexCol)
 
 # Display 2D in matrix style
 for i in range(4):
     for j in range(4):
-        print(a4x4Matrix[i][j], end=" ")
+        print(m1[i][j], end=" ")
         if(j==3):
             print()
 
 # Finding largest col index
-columnTraversed = 0
-largestColumnIndex = 0
-rowsTraversed = 0
-currentColumnSum = 0
-largestColumnSum = 0
-while(columnTraversed<4):
-    currentColumnSum = currentColumnSum + a4x4Matrix[rowsTraversed][columnTraversed]
-    if(currentColumnSum>largestColumnSum):
-        largestColumnIndex = columnTraversed
-        largestColumnSum = currentColumnSum
+colVisited = 0
+maxColIndex = 0
+rowVisited = 0
+currColSum = 0
+maxColSum = 0
+while(colVisited<4):
+    currColSum = currColSum + m1[rowVisited][colVisited]
+    if(currColSum>maxColSum):
+        maxColIndex = colVisited
+        maxColSum = currColSum
 
-    if(rowsTraversed == 3):
-        columnTraversed+=1
-        currentColumnSum = 0
-        rowsTraversed=-1
-
-    rowsTraversed += 1
-
+    if(rowVisited == 3):
+        colVisited+=1
+        currColSum = 0
+        rowVisited=-1
+    rowVisited += 1
 
 print("The largest row index: " ,index)
-print("The largest col index: ", largestColumnIndex, largestColumnSum)
+print("The largest col index: ", maxColIndex, maxColSum)

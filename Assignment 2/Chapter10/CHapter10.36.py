@@ -6,10 +6,10 @@
 # and repaints the histogram with a bar indicating the search position. When
 # the algorithm is finished, display a dialog box to inform the user. Clicking the
 # Reset button creates a new random list for a new start.
-
-from tkinter import *  # Import tkinter
-import tkinter.messagebox
 import random
+from tkinter import * 
+import tkinter.messagebox
+
 
 class StepControl:
     def __init__(self):
