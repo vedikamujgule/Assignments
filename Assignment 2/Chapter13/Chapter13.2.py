@@ -6,6 +6,7 @@
 filename = input("Enter a filename: ").strip()
 file = open(filename, 'r')
 
+#initialize the variables
 lines = 0
 words = 0
 chars = 0
@@ -16,7 +17,8 @@ for line in file:
     for c in line:
         if c != ' ':
             chars += 1
-
-print(chars, "characters")
-print(words, "words")
-print(lines, "Lines")
+            
+#print variables
+print(chars, ": no of characters")
+print(words, ": no of words")
+print(lines, ": no of Lines")

@@ -1,65 +1,65 @@
 # 13.10 (The Rational class) Modify the Rational class in Listing 8.4, Rational.py, to
-# throw a RuntimeError exception if the denominator is 0.
+# throw a RuntimeError exception if the d is 0.
 
 class Rational:
-    def __init__(self, numerator=0, denominator=1):
-        if denominator == 0:
+    def __init__(self, n=0, d=1):
+        if d == 0:
             raise RuntimeError()
 
-        divisor = gcd(numerator, denominator)
-        self.__numerator = (1 if denominator > 0 else -1) \
-                           * int(numerator / divisor)
-        self.__denominator = int(abs(denominator) / divisor)
+        divisor = gcd(n, d)
+        self.__n = (1 if d > 0 else -1) \
+                           * int(n / divisor)
+        self.__d = int(abs(d) / divisor)
 
-    def __add__(self, secondRational):
-        n = self.__numerator * secondRational[1] + \
-            self.__denominator * secondRational[0]
-        d = self.__denominator * secondRational[1]
+    def __add__(self, Rational_2):
+        n = self.__n * Rational_2[1] + \
+            self.__d * Rational_2[0]
+        d = self.__d * Rational_2[1]
         return Rational(n, d)
 
-    def __sub__(self, secondRational):
-        n = self.__numerator * secondRational[1] - \
-            self.__denominator * secondRational[0]
-        d = self.__denominator * secondRational[1]
+    def __sub__(self, Rational_2):
+        n = self.__n * Rational_2[1] - \
+            self.__d * Rational_2[0]
+        d = self.__d * Rational_2[1]
         return Rational(n, d)
 
-    def __mul__(self, secondRational):
-        n = self.__numerator * secondRational[0]
-        d = self.__denominator * secondRational[1]
+    def __mul__(self, Rational_2):
+        n = self.__n * Rational_2[0]
+        d = self.__d * Rational_2[1]
         return Rational(n, d)
 
-    def __truediv__(self, secondRational):
-        n = self.__numerator * secondRational[1]
-        d = self.__denominator * secondRational[0]
+    def __truediv__(self, Rational_2):
+        n = self.__n * Rational_2[1]
+        d = self.__d * Rational_2[0]
         return Rational(n, d)
 
     def __float__(self):
-        return self.__numerator / self.__denominator
+        return self.__n / self.__d
 
     def __int__(self):
         return int(self.__float__())
 
     def __str__(self):
-        if self.__denominator == 1:
-            return str(self.__numerator)
+        if self.__d == 1:
+            return str(self.__n)
         else:
-            return str(self.__numerator) + "/" + str(self.__denominator)
+            return str(self.__n) + "/" + str(self.__d)
 
-    def __lt__(self, secondRational):
-        return self.__cmp__(secondRational) < 0
+    def __lt__(self, Rational_2):
+        return self.__cmp__(Rational_2) < 0
 
-    def __le__(self, secondRational):
-        return self.__cmp__(secondRational) <= 0
+    def __le__(self, Rational_2):
+        return self.__cmp__(Rational_2) <= 0
 
-    def __gt__(self, secondRational):
-        return self.__cmp__(secondRational) > 0
+    def __gt__(self, Rational_2):
+        return self.__cmp__(Rational_2) > 0
 
-    def __ge__(self, secondRational):
-        return self.__cmp__(secondRational) >= 0
+    def __ge__(self, Rational_2):
+        return self.__cmp__(Rational_2) >= 0
 
     # Compare two numbers
-    def __cmp__(self, secondRational):
-        temp = self.__sub__(secondRational)
+    def __cmp__(self, Rational_2):
+        temp = self.__sub__(Rational_2)
         if temp[0] > 0:
             return 1
         elif temp[0] < 0:
@@ -69,9 +69,9 @@ class Rational:
 
     def __getitem__(self, index):
         if index == 0:
-            return self.__numerator
+            return self.__n
         else:
-            return self.__denominator
+            return self.__d
 
 def gcd(n, d):
     n1 = abs(n)
@@ -90,5 +90,5 @@ def main():
         n2 = Rational(1, 0)
         print(n1 + n2)
     except RuntimeError:
-        print("Cannot divide by Zero!")
+        print("Exp: Cannot divide by Zero!")
 main()

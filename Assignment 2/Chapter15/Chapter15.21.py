@@ -1,25 +1,23 @@
 # 15.21 (Binary to decimal) Write a recursive function that parses a binary number as a
-# string into a decimal integer. The function header is as follows:
+# stringInputing into a decimal integer. The function header is as follows:
 # def binaryToDecimal(binaryString):
-# Write a test program that prompts the user to enter a binary string and displays its
+# Write a test program that prompts the user to enter a binary stringInputing and displays its
 # decimal equivalent.
 
 
 def binaryToDecimal(binaryString):
     return binaryToDecimalHelper(binaryString, 0, 0)
 
-def binaryToDecimalHelper(str, dec, i):
-    if str != '':
-        dec += int(str[-1]) * 2 ** i
-        print(str[:len(str) - 1], dec)
-        return binaryToDecimalHelper(str[:len(str) - 1], dec, i + 1)
+def binaryToDecimalHelper(stringInput, dec, i):
+    if stringInput != '':
+        dec += int(stringInput[-1]) * 2 ** i
+        return binaryToDecimalHelper(stringInput[:len(stringInput) - 1], dec, i + 1)
     return dec
 
+print(binaryToDecimal(input("Enter binary string Input: ")))
 
-print(binaryToDecimal(input("Enter binary string: ")))
-
-# def btd(str):
-#     return btdhelper(str,0,0)
-# def btdhelper(str,dec,i):
-#     if str != '':
-#         dec += int(str[-1])
+# def btd(stringInput):
+#     return btdhelper(stringInput,0,0)
+# def btdhelper(stringInput,dec,i):
+#     if stringInput != '':
+#         dec += int(stringInput[-1])

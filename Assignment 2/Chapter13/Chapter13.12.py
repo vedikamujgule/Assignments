@@ -43,8 +43,8 @@ class GeometricObject:
                " and filled: " + str(self.__filled)
 
 class Triangle(GeometricObject):
-    def __init__(self, side1=1.0, side2=1.0, side3=1.0, color="green", isFilld=True):
-        super().__init__(color, isFilld)
+    def __init__(self, side1=1.0, side2=1.0, side3=1.0, color="red", isFilled=True):
+        super().__init__(color, isFilled)
         self.__side1 = side1
         self.__side2 = side2
         self.__side3 = side3
@@ -89,14 +89,14 @@ class Triangle(GeometricObject):
 
 def main():
     try:
-        s1, s2, s3 = eval(input("Enter 3 sides of a Triangle: "))
+        side1, side2, side3 = eval(input("Enter 3 sides of a Triangle: "))
         color = input("Enter color of the triangle: ")
         isFilled = bool(int(input("Triangle filled? (1/0): ")))
-        traingleObj = Triangle(s1, s2, s3, color, isFilled)
+        traingleObj = Triangle(side1, side2, side3, color, isFilled)
         print("Area of triangle is:", traingleObj.getArea())
         print("Perimeter of triangle is:", traingleObj.getPerimeter())
         print(traingleObj)
     except TriangleError:
-        print("Invalid input to form triange")
+        print("Invalid input to form triange..")
 
 main()

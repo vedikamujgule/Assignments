@@ -5,10 +5,10 @@
 # that prompts the user to enter an integer and displays its sum.
 
 
-def sumDigits(n):
-    if n == 0:
-        return n
-    return (n % 10 + sumDigits(n//10))
+def sumDigits(num):
+    if num == 0:
+        return num
+    return (num % 10 + sumDigits(num//10))
 
-n = eval(input("Enter a digit: "))
-print("The sum of the digits is:", sumDigits(n))
+userInput = eval(input("Enter a digit: "))
+print("The sum of the digits is:", sumDigits(userInput))

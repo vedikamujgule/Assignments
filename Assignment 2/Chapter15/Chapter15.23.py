@@ -8,21 +8,21 @@
 # cba
 # (Hint: Define the following two functions. The second function is a helper function.
 # def displayPermuation(s):
-# def displayPermuationHelper(s1, s2):
+# def displayPermuationHelper(string1, string2):
 # The first function simply invokes displayPermuation(" ", s). The second
-# function uses a loop to move a character from s2 to s1 and recursively invokes
-# it with a new s1 and s2. The base case is that s2 is empty and prints s1 to the
+# function uses a loop to move a character from string2 to string1 and recursively invokes
+# it with a new string1 and string2. The base case is that string2 is empty and prints string1 to the
 # console.)
 # Write a test program that prompts the user to enter a string and displays all its permutations.
 
 def displayPermuation(s):
     displayPermuationHelper("", s)
 
-def displayPermuationHelper(s1, s2):
-    if s2 == '':
-        print(s1)
+def displayPermuationHelper(string1, string2):
+    if string2 == '':
+        print(string1)
     else:
-        for i in range(len(s2)):
-            displayPermuationHelper(s1 + s2[i], s2[0:i] + s2[i + 1:len(s2)])
+        for i in range(len(string2)):
+            displayPermuationHelper(string1 + string2[i], string2[0:i] + string2[i + 1:len(string2)])
 
 displayPermuation(input("Enter a string: "))

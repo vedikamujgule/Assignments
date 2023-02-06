@@ -15,8 +15,8 @@ def getNumberOfFiles(path):
     return size
 
 
-path = input("Enter a directory or a file: ").strip()
+path = input("Enter a directory path or a file name: ").strip()
 try:
-    print("The number of files is " + str(getNumberOfFiles(path)))
+    print("The number of files is this diectory are " + str(getNumberOfFiles(path)))
 except:
     print("File or directory does not exist")

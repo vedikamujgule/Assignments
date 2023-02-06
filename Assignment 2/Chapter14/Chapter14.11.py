@@ -3,17 +3,17 @@
 # a set to store the vowels A, E, I, O, and U.
 
 vowels = {'a', 'e', 'i', 'o', 'u'}
-count_vowels = 0
-count_consonants = 0
+vowelsCount = 0
+consonantsCount = 0
 file = open(input("Enter filename: "))
 lines = file.readlines()
 for line in lines:
     for word in line.split():
-        for c in word.lower():
-            if c in vowels:
-                count_vowels += 1
+        for ch in word.lower():
+            if ch in vowels:
+                vowelsCount += 1
             else:
-                count_consonants += 1
+                consonantsCount += 1
 
-print("Total number of vowels are=", count_vowels)
-print("Total number of consonants are =", count_consonants)
+print("The Total number of vowels are :", vowelsCount)
+print("The Total number of consonants are: ", consonantsCount)

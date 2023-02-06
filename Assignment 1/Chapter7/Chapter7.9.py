@@ -32,21 +32,21 @@ class LinearEquation:
         return self.__f
 
     def isSolvable(self):
-        denominator = self.__a * self.__d - self.__b * self.__c
-        return True if denominator != 0 else False
+        d = self.__a * self.__d - self.__b * self.__c
+        return True if d != 0 else False
 
     def getX(self):
-        denominator = self.__a * self.__d - self.__b * self.__c
-        numerator = self.__e * self.__d - self.__b * self.__f
-        return numerator / denominator
+        d = self.__a * self.__d - self.__b * self.__c
+        n = self.__e * self.__d - self.__b * self.__f
+        return n / d
 
     def getY(self):
-        denominator = self.__a * self.__d - self.__b * self.__c
-        numerator = self.__a * self.__f - self.__e * self.__c
-        return numerator / denominator
+        d = self.__a * self.__d - self.__b * self.__c
+        n = self.__a * self.__f - self.__e * self.__c
+        return n / d
     
-x1, y1, x2, y2 = eval(input("Enter the endpoints of the first line segment: "))
-x3, y3, x4, y4 = eval(input("Enter the endpoints of the second line segment: "))
+x1, y1, x2, y2 = eval(input("Enter the endpoints (x1, y1, x2, y2) of the 1st line segment: "))
+x3, y3, x4, y4 = eval(input("Enter the endpoints (x3, y3, x4, y4) of the 2nd line segment: "))
 
 a = y1 - y2
 b = -x1 + x2

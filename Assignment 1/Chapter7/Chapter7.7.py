@@ -20,7 +20,7 @@ class LinearEquation:
         self.__e = e
         self.__f = f
 
-    #getter 
+    #getter methods
     def getA(self):
         return self.__a
 
@@ -39,23 +39,24 @@ class LinearEquation:
     def getF(self):
         return self.__f
 
+    #check if equations are solvalable
     def isSolvable(self):
-        denominator = self.__a * self.__d - self.__b * self.__c
-        return True if denominator != 0 else False
+        d = self.__a * self.__d - self.__b * self.__c
+        return True if d != 0 else False
 
     def getX(self):
-        denominator = self.__a * self.__d - self.__b * self.__c
-        numerator = self.__e * self.__d - self.__b * self.__f
-        return numerator / denominator
+        d = self.__a * self.__d - self.__b * self.__c
+        n = self.__e * self.__d - self.__b * self.__f
+        return n / d
 
     def getY(self):
-        denominator = self.__a * self.__d - self.__b * self.__c
-        numerator = self.__a * self.__f - self.__e * self.__c
-        return numerator / denominator
+        d = self.__a * self.__d - self.__b * self.__c
+        n = self.__a * self.__f - self.__e * self.__c
+        return n / d
     
-a, b, c, d, e, f = eval(input("Enter a,b,c,d,e,f: "))
+a, b, c, d, e, f = eval(input("Enter values for the following a,b,c,d,e,f: "))
 eq = LinearEquation(a, b, c, d, e, f)
 if (eq.isSolvable()):
-    print("X:", eq.getX(), "\tY:", eq.getY())
+    print("X is:", eq.getX(), "\tY is:", eq.getY())
 else:
     print("The equation is not solvable!")

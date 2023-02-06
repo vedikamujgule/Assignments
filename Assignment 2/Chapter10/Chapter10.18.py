@@ -1,62 +1,65 @@
 # The classic Eight Queens puzzle is to place eight
-# queens on a chessboard such that no two queens can attack each other (i.e., no
-# two queens are in the same row, same column, or same diagonal). There are
+# qs on a chessboard such that no two qs can attack each other (i.e., no
+# two qs are in the same row, same col, or same diagonal). There are
 # many possible solutions. Write a program that displays one such solution. A
 # sample output is shown below: 
 
-def findPosition(k, queens):
-    start = 0 if queens[k] == -1 else (queens[k] + 1)
+#find position 
+def findPosition(k, qs):
+    start = 0 if qs[k] == -1 else (qs[k] + 1)
 
     for j in range(start, 8):
-        if isValid(k, j, queens):
+        if isValid(k, j, qs):
             return j 
     return -1
 
-def isValid(k, j, queens):
+#check validity for the position
+def isValid(k, j, qs):
     for i in range(k):
-        if queens[i] == j:
+        if qs[i] == j:
             return False
     row = k - 1
-    column = j - 1
-    while row >= 0 and column >= 0:
-        if queens[row] == column:
+    col = j - 1
+    while row >= 0 and col >= 0:
+        if qs[row] == col:
             return False
         row -= 1
-        column -= 1
+        col -= 1
     row = k - 1
-    column = j + 1
-    while row >= 0 and column <= 7:
-        if queens[row] == column:
+    col = j + 1
+    while row >= 0 and col <= 7:
+        if qs[row] == col:
             return False
         row -= 1
-        column -= 1
+        col -= 1
     return True
 
-def printResult(queens):
+#display function 
+def printResult(qs):
     for i in range(8):
-        print(str(i) + ", " + str(queens[i]))
+        print(str(i) + ", " + str(qs[i]))
     print()
     for i in range(8):
-        for j in range(queens[i]):
+        for j in range(qs[i]):
             print("| ", end="")
         print("|Q|", end="")
 
-        for j in range(queens[i] + 1, 8):
+        for j in range(qs[i] + 1, 8):
             print(" |", end="")
         print()
 
+
 def main():
-    queens = 8 * [-1] 
-    queens[0] = 0
+    qs = 8 * [-1] 
+    qs[0] = 0
     k = 1
     while k >= 0 and k <= 7:
-        j = findPosition(k, queens)
+        j = findPosition(k, qs)
         if j < 0:
-            queens[k] = -1
+            qs[k] = -1
             k -= 1  
         else:
-            queens[k] = j
+            qs[k] = j
             k += 1
-    printResult(queens)
-
+    printResult(qs)
 main()

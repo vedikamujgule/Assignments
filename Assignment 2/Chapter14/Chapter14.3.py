@@ -6,7 +6,7 @@ import os.path
 import sys
 
 def main():
-    keyWords = {"and": 0, "as": 0, "assert": 0, "break": 0, "class": 0,
+    keyWordsArray = {"and": 0, "as": 0, "assert": 0, "break": 0, "class": 0,
                 "continue": 0, "def": 0, "del": 0, "elif": 0, "else": 0,
                 "except": 0, "False": 0, "finally": 0, "for": 0, "from": 0,
                 "global": 0, "if": 0, "import": 0, "in": 0, "is": 0, "lambda": 0,
@@ -18,9 +18,7 @@ def main():
     if not os.path.isfile(filename):
         print("File with name", filename, "does not exist")
         sys.exit()
-
     infile = open(filename, "r")
-
     text = infile.readlines()
     for i in range(len(text)):
         indx = text[i].find(chr(35))
@@ -28,13 +26,12 @@ def main():
             line = text[i]
             line = line[0:indx]
             text[i] = line
-
     for line in text:
         for word in line.split():
-            if word in keyWords:
-                keyWords[word] += 1
+            if word in keyWordsArray:
+                keyWordsArray[word] += 1
 
-    for itm in keyWords:
-        print(itm, ":", keyWords[itm])
+    for item in keyWordsArray:
+        print(item, ":", keyWordsArray[item])
 
 main()

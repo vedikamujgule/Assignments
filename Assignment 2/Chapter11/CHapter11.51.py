@@ -14,6 +14,6 @@ students.sort(key=lambda x:x[1])
 print(students)
 
 for i in students:
-    print("Name: ", i[0], "\t")
-    print("Score: ", i[1], "\n")
+    print("Name of Student is: ", i[0], "\t")
+    print("Score of student is: ", i[1], "\n")
 

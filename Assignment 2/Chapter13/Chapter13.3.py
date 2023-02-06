@@ -1,22 +1,23 @@
-# 13.3 (Process scores in a text file) Suppose that a text file contains an unspecified number
-# of scores. Write a program that reads the scores from the file and displays their
+# 13.3 (Process scrs in a text file) Suppose that a text file contains an unspecified number
+# of scrs. Write a program that reads the scrs from the file and displays their
 # total and average. Scores are separated by blanks. Your program should prompt
 # the user to enter a filename.
 
-filename = input("Enter a filename: ").strip()
+filename = input("Enter filename: ").strip()
 file = open(filename, 'r')
+#initalize vaiables
 count = 0
-avg = 0
+average = 0
 sum = 0
 for line in file:
-    scores = line.split()
-    scores = [eval(s) for s in scores]
-    count += len(scores)
-    for s in scores:
+    scrs = line.split()
+    scrs = [eval(s) for s in scrs]
+    count += len(scrs)
+    for s in scrs:
         sum += s
 
-avg = sum / count
+average = sum / count
 
-print("There are", count, "scores")
-print("The total is", sum)
-print("The average is", avg)
+print("There are total: ", count, "scores in the file")
+print("The total sum is: ", sum)
+print("The average is: ", average)

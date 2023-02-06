@@ -10,6 +10,6 @@ def gcd(m, n):
         return n
     return gcd(n, m % n)
 
-m, n = eval(input("Enter two numbers: "))
+num1, num2 = eval(input("Enter two numbers: "))
 
-print("The GCD of", m, "and", n, "is", gcd(m, n))
+print("The GCD of", num1, "and", num2, "is", gcd(num1,num2))
