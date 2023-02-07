@@ -39,3 +39,28 @@ currTime = Time()
 elapsedTime= eval(input("Enter the time elapsed: "))
 currTime.setTime(elapsedTime)
 print("The elapse time is HR:MIN:SEC : ",currTime.getHour(), ":", currTime.getMinute(), ":", currTime.getSecond())
+
+
+def main():
+    filename = input("Enter file name").strip()
+    inline = open(filename,'r')
+    wordsCount = {}
+    for line in inline:
+        processLine(line.lower,wordsCount)
+    pairs = list(wordsCount.items)
+
+def processLine(line,wordsCount):
+    line = replacePunct(line)
+    for word in line.split():
+        if word in wordsCount:
+            wordsCount[word] +=1
+        else:
+            wordsCount[word] =1
+            return 0
+
+def replacePunct(line):
+    words = line.split()
+    for ch in words:
+        if ch in "~`!@#$%^&*(){}:'[])()":
+            line.replace(ch," ")
+    return line

@@ -9,7 +9,7 @@ def find(s1,s2):
 
     start = 0
     while len1<=len2:
-        if s1 !=s2[start:start+len1]:
+        if s1 != s2[start:start+len1]:
             start +=1
             len2 -=1
         else:

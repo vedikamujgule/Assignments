@@ -6,24 +6,39 @@
 # two-dimensional list. Write a test program that prompts the user to enter a twodimensional
 # list and displays the location of the largest element in the list. Here is
 # a sample run:
+import random
 
-def locateLargest(a):
-    max_i = 0
-    max_j = 0
-    for i in range(len(a)):
-        for j in range(len(a[i])):
-            if a[i][j] > a[max_i][max_j]:
-                max_i = i
-                max_j = j
-    return max_i, max_j
+def getRandBinaryValue():
+    return random.randint(0, 1)
 
-rows = int(input("Enter the number of rows in the list: "))
-matrix = []
+a4x4Matrix = []
 
-for i in range(rows):
-    r = input("Enter a row: ").split()
-    r = [float(x) for x in r]
-    matrix.append(r)
+# Fill 4x4 Matrix and get largest row index in the process
+for i in range(4):
+    a4x4Matrix.append([0] * 4)
+    for j in range(4):
+        a4x4Matrix[i][j] = getRandBinaryValue()
 
-row, col = locateLargest(matrix)
-print("The location of the largest element is at (" + str(row) + "," + str(col) + ")")
+
+listSums = [sum(r) for r in a4x4Matrix]
+
+max1 = max(listSums)
+
+
+indexCollection = []
+
+for i in range(len(listSums)):
+    if listSums[i] == max1:
+        indexCollection.append(i)
+
+print(indexCollection)
+
+# Display 2D in matrix style
+for i in range(4):
+    for j in range(4):
+        print(a4x4Matrix[i][j], end=" ")
+        if(j==3):
+            print()
+
+print("The largest row index", end=" ")
+print(*indexCollection, sep=", ")

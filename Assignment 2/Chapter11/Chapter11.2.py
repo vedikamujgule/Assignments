@@ -16,6 +16,5 @@ matrix = []
 for i in range(4): 
     row = input("Enter a 4-by-4 matrix row for row " + str(i + 1) + ": ").split()
     matrix.append([float(x) for x in row])
-    print(matrix)
 
-print("Sum of the elements in the major diagonal is", sumMajorDiagonal(m))
+print("Sum of the elements in the major diagonal is: ", sumMajorDiagonal(matrix))

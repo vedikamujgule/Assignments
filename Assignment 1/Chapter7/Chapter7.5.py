@@ -29,29 +29,29 @@ class RegularPolygon:
         self.__y = y
 
     # getter
-        def getN(self):
+    def getN(self):
             return self.n
         
-        def getSide(self):
+    def getSide(self):
             return self.side
         
-        def getX(self):
+    def getX(self):
             return self.x
         
-        def getY(self):
+    def getY(self):
             return self.y
         
     # setter
-        def setN(self,n):
+    def setN(self,n):
             self.__n = n
 
-        def setSide(self,side):
+    def setSide(self,side):
             self.__side = side
 
-        def setX(self,n):
+    def setX(self,n):
             self.__x = x
 
-        def setY(self,y):
+    def setY(self,y):
             self.__y = y
 
     def getPerimeter(self):

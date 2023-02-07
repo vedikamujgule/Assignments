@@ -4,8 +4,8 @@
 # 1 is a divisor for both n1 and n2 in this order. The first such common divisor is the
 # greatest common divisor for n1 and n2.
 
-n1 = int(input("Enter first integer: "))
-n2 = int(input("Enter second integer: "))
+n1 = int(input("Enter 1st integer: "))
+n2 = int(input("Enter nnd integer: "))
 
 d = min(n1, n2)
 

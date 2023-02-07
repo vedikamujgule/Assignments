@@ -7,6 +7,7 @@
 # award is $3,000.
 # 3. If one digit in the user input matches a digit in the lottery number, the award is
 # $1,000.
+
 import random
 
 NUM = int(random.randint(100,999))

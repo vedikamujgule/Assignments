@@ -3,6 +3,10 @@
 # total and average. Scores are separated by blanks. Your program should prompt
 # the user to enter a filename.
 
+
+##note: please create a file.checl for the coorect file
+
+
 filename = input("Enter filename: ").strip()
 file = open(filename, 'r')
 #initalize vaiables
